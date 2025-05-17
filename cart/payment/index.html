@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="topdiv">
+        <top-bar id="topbar"></top-bar>
+    </div>
+    <div id="navdiv">
+        <iframe src="../../Navbar/nav2.html" id="navbar"></iframe>
+    </div>
+    <div class="container">
+        <form id="payment-form" onsubmit="generateBill(event)">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="input-box">
+                        <span>Full Name :</span>
+                        <input type="text" id="fullName" placeholder="Ravi Kiran K" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Email :</span>
+                        <input type="email" id="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Address :</span>
+                        <input type="text" id="address" placeholder="Room - Street - Locality" required>
+                    </div>
+                    <div class="input-box">
+                        <span>City :</span>
+                        <input type="text" id="city" placeholder="Bengaluru">
+                    </div>
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>State :</span>
+                            <input type="text" id="state" placeholder="Karnataka">
+                        </div>
+                        <div class="input-box">
+                            <span>Zip Code :</span>
+                            <input type="text" id="zipCode" placeholder="123 456">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Payment</h3>
+                    <div class="input-box">
+                        <span>Cards Accepted :</span>
+                        <img src="imgcards.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <span>Name On Card :</span>
+                        <input type="text" id="cardName" placeholder="Mr. Ravi Kiran K" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Credit Card Number :</span>
+                        <input type="text" id="cardNumber" placeholder="1111 2222 3333 4444" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Exp. Month :</span>
+                        <select id="expMonth" required>
+                            <option value="" disabled selected>Select Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Exp. Year :</span>
+                            <select id="expYear" required>
+                                <option value="" disabled selected>Select Year</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                                <option value="2032">2032</option>
+                                <option value="2033">2033</option>
+                                <option value="2034">2034</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <span>CVV :</span>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- New modal overlay for bill details -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div id="bill-details" class="bill-details">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <h3>Your Bill</h3>
+            <div class="info">
+                <p><strong>Full Name:</strong> <span id="bill-name"></span></p>
+                <p><strong>Email:</strong> <span id="bill-email"></span></p>
+                <p><strong>Address:</strong> <span id="bill-address"></span></p>
+                <p><strong>City:</strong> <span id="bill-city"></span></p>
+                <p><strong>State:</strong> <span id="bill-state"></span></p>
+                <p><strong>Zip Code:</strong> <span id="bill-zipcode"></span></p>
+                <p><strong>Total Amount:</strong> ₹<span id="bill-total"></span></p>
+                <p><strong>Delivery Date:</strong> <span id="delivery-date"></span></p>
+                <p><strong>Reaching Date:</strong> <span id="reaching-date"></span></p>
+            </div>
+            <button onclick="window.location.href = 'thankyou.html';">Proceed to Payment</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <div id="footerdiv">
+        <iframe src="../../Footer/footer2.html" id="footer" scrolling="no" frameborder="0" title="Footer"></iframe>
+    </div>
+    
+    <script src="../../Navbar/top/top2.js"></script>
+</body>
+</html>

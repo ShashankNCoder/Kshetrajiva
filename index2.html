@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>KSHETRAJIVA | KRUSHISEV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div id="topdiv">
+        <top-bar id="topbar"></top-bar>
+    </div>
+    <div id="navdiv">
+        <iframe src="Navbar/nav2.html" id="navbar"></iframe>
+    </div>
+
+    <section>
+        <section class="parallax-3">
+            <div class="parallax-inner">
+                <h1>Welcome Back!</h1>
+                <p class="user-status">Be Active In Protecting Your Land</p>
+            </div>
+        </section>
+        
+        <section class="maintenance-section">
+            <h2>Maintenance Schedule</h2>
+            <div class="maintenance-timeline">
+                <div class="maintenance-item">
+                    <i class="fa fa-tint highlight-icon"></i>
+                    <h4>Chemical Refill Due</h4>
+                    <p>Due in: 10 days</p>
+                </div>
+                <div class="maintenance-item">
+                    <i class="fa fa-wrench highlight-icon"></i>
+                    <h4>Next Camera Maintenance</h4>
+                    <p>Scheduled: 15 Sep 2025</p>
+                </div>
+                <div class="maintenance-item">
+                    <i class="fa fa-shield-alt highlight-icon"></i>
+                    <h4>Total Attacks</h4>
+                    <p>This Month: <span id="attackCount">2</span></p>
+                    <div class="counter-controls">
+                        <button onclick="updateAttackCount(1)" class="counter-btn">+</button>
+                        <button onclick="updateAttackCount(-1)" class="counter-btn">-</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-section">
+            <h2>System Overview</h2>
+            <div class="dashboard-stats">
+                <div class="stat-box">
+                    <i class="fa fa-shield"></i>
+                    <h3>Active Device Cameras</h3>
+                    <p><span id="deviceCount">2</span> Devices Online</p>
+                    <div class="counter-controls">
+                        <button onclick="updateCount('deviceCount', 1)" class="counter-btn small">+</button>
+                        <button onclick="updateCount('deviceCount', -1)" class="counter-btn small">-</button>
+                    </div>
+                    <a href="#" class="stat-link">-Manage Devices-</a>
+                </div>
+                <div class="stat-box">
+                    <i class="fa fa-map-marker"></i>
+                    <h3>Protected Areas</h3>
+                    <p><span id="zoneCount">2</span> Active Zones</p>
+                    <div class="counter-controls">
+                        <button onclick="updateCount('zoneCount', 1)" class="counter-btn small">+</button>
+                        <button onclick="updateCount('zoneCount', -1)" class="counter-btn small">-</button>
+                    </div>
+                    <a href="#" class="stat-link">-View Zones-</a>
+                </div>
+                <div class="stat-box">
+                    <i class="fa fa-bell"></i>
+                    <h3>Recent Alerts</h3>
+                    <p>6 New Notifications</p>
+                    <a href="#" class="stat-link">-View Alerts-</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="device-status">
+            <h2>Device Status</h2>
+            <div class="device-grid">
+                <div class="device-card">
+                    <i class="fa fa-camera"></i>
+                    <h3>Camera System</h3>
+                    <p class="status online">Online</p>
+                    <p>Battery: 85%</p>
+                    <button class="view-feed">View Live Feed</button>
+                </div>
+                <div class="device-card">
+                    <i class="fa fa-spray-can"></i>
+                    <h3>Deterrent System</h3>
+                    <p class="status online">Online</p>
+                    <p>Chemical Level: 70%</p>
+                    <button class="check-status">Check Status</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="user-activity">
+            <h2>Recent Activity</h2>
+            <div class="activity-feed">
+                <div class="activity-item">
+                    <i class="fa fa-check-circle"></i>
+                    <p>System Check Complete - All devices working properly</p>
+                    <span class="time">2 hours ago</span>
+                </div>
+                <div class="activity-item alert">
+                    <i class="fa fa-exclamation-triangle"></i>
+                    <p>Movement detected in Zone 1</p>
+                    <span class="time">Yesterday</span>
+                </div>
+                <div class="activity-item warning">
+                    <i class="fa fa-info-circle"></i>
+                    <p>Chemical deterrent level below 30% in Zone 2</p>
+                    <span class="time">2 days ago</span>
+                </div>
+                <div class="activity-item alert">
+                    <i class="fa fa-video-camera"></i>
+                    <p>Camera 2 detected unusual activity near perimeter</p>
+                    <span class="time">3 days ago</span>
+                </div>
+                <div class="activity-item">
+                    <i class="fa fa-refresh"></i>
+                    <p>System maintenance completed successfully</p>
+                    <span class="time">4 days ago</span>
+                </div>
+                <div class="activity-item warning">
+                    <i class="fa fa-battery-quarter"></i>
+                    <p>Low battery warning for Camera System 1</p>
+                    <span class="time">5 days ago</span>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <section class="latest-news section-p1">
+        <h2>Latest News</h2>
+        <div class="news-container">
+            <div class="news-card">
+                <a href="https://thesouthfirst.com/karnataka/human-animal-conflict-not-elephant-or-tiger-wild-boar-is-the-big-problem-for-karnataka-farmers/" target="_blank" style="text-decoration: none; color: inherit;">
+                <img src="https://images.thesouthfirst.com/wp-content/uploads/2023/01/Wild-board-in-Karnataka-Bandipur-wildlife-sanctuary_V_jpg--1280x720-4g.webp?sw=1280&dsz=1280x720&iw=736&p=false&r=1.5" alt="Philippine partners">
+                <div class="news-content">
+                    <h3>Human-animal conflict: Not deaths, but crop destruction by wild boar is the big problem for Karnataka farmers</h3>
+                    <p>Wild boars from the nearby forests — clearly undeterred by Khan’s scarecrow — had stolen into his village in Mandya district of Karnataka, and in the cover of darkness, cleaned his patch of rakthasali bare.</p>
+                    <a href="https://thesouthfirst.com/karnataka/human-animal-conflict-not-elephant-or-tiger-wild-boar-is-the-big-problem-for-karnataka-farmers/" class="read-more" target="_blank">Read More</a>
+                </a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <a href="https://www.newindianexpress.com/states/tamil-nadu/2020/Sep/20/7562-cases-of-crop-raiding-by-wild-animals-reported-in-last-threeyears-across-tamil-nadu-2199345.html" target="_blank" style="text-decoration: none; color: inherit;">
+                <img src="https://media.assettype.com/TNIE%2Fimport%2F2020%2F9%2F20%2Foriginal%2F7562_CASES_OFc.jpg?w=1024&auto=format%2Ccompress&fit=max" alt="Young changemakers in Uganda">
+                <div class="news-content">
+                    <h3>7,562 cases of crop-raiding by wild animals reported in last 3 years.</h3>
+                    <p>As per the data pertaining to 10 states released by the Union Minister, Tamil Nadu comes second only to Andhra Pradesh in the number of incidents relating to human-animal conflict.</p>
+                    <a href="https://www.newindianexpress.com/states/tamil-nadu/2020/Sep/20/7562-cases-of-crop-raiding-by-wild-animals-reported-in-last-threeyears-across-tamil-nadu-2199345.html" class="read-more" target="_blank">Read More</a>
+                </a>
+                </div>
+            </div>
+    
+            <div class="news-card">
+                <a href="https://www.hindustantimes.com/cities/bengaluru-news/yearend-summary-karnataka-battles-a-surge-in-man-animal-conflicts-101703876278713.html" target="_blank" style="text-decoration: none; color: inherit;">
+                <img src="https://www.hindustantimes.com/ht-img/img/2023/12/29/550x309/In-2023-this-menace-was-not-confined-to-rural-area_1703876275844.jpg" alt="Elephant Attack">
+                <div class="news-content">
+                    <h3>Karnataka battles a surge in man-animal conflicts</h3>
+                    <p>The forests in Western Ghats of Karnataka, that once cradled with the coexistence of farmers and animals, have now been witnessing a surge in man-animal conflicts due to increased human settlements and encroachment on traditional elephant corridors in the region.</p>
+                    <a href="https://www.hindustantimes.com/cities/bengaluru-news/yearend-summary-karnataka-battles-a-surge-in-man-animal-conflicts-101703876278713.html" class="read-more" target="_blank">Read More</a>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-category section-p1">
+        <h2>Animals Repellents</h2>
+        <div class="video-container">
+            <div class="video-card">
+                <div class="thumbnail">
+                    <iframe width="100%" height="200" 
+                        src="https://www.youtube.com/embed/fq5e1c_F7js"
+                        title="Elephant Repellent" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h4>A  University of Hawai‘i insect ecology specialist has shown that honeybee pheromones can repel elephants, suggesting a new tool for the pachyderms out of areas where they can come into conflict with humans.</h4>
+                    <p class="stats">Elephant Repellent</p>
+                    <div class="tags">
+                        <span class="tag">EN</span>
+                        <span class="tag">Repellent</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail">
+                    <iframe width="100%" height="200" 
+                        src="https://www.youtube.com/embed/on0B0iCovOo"
+                        title="How bees can keep the peace between elephants and humans" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h4>In this engaging talk, zoologist Lucy King shares her solution to the rising conflict: fences made from beehives that keep elephants at bay while also helping farmers establish new livelihoods.</h4>
+                    <p class="stats">How bees can keep the peace between elephants and humans</p>
+                    <div class="tags">
+                        <span class="tag">EN</span>
+                        <span class="tag">Natural</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail">
+                    <iframe width="100%" height="200" 
+                        src="https://www.youtube.com/embed/-yhvzgqmF6E"
+                        title="Chilli bombs: the answer to human-elephant conflict?" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h4>The amazing community program work carried out by Conservation South Luangwa (CSL) in order to mitigate conflict between elephants and people. CSL are  working  with community and conservation partners to protect the wildlife and habitats of the South Luangwa ecosystem in Zambia.</h4>
+                    <p class="stats">Chilli bombs: the answer to human-elephant conflict?</p>
+                    <div class="tags">
+                        <span class="tag">EN</span>
+                        <span class="tag">Smart Tech</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials section-p1">
+        <h2>What Farmers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-track">
+                <div class="testimonial">
+                    <img src="img/farmers/farmer1.png" alt="Farmer">
+                    <p>"Dealing with animals that enter farmland is not easy, often requiring tough measures to protect crops and property. While humane solutions are preferred, sometimes immediate action is necessary to prevent further destruction. Finding an effective and sustainable way to deter animals without harming them remains a significant challenge for farmers."</p>
+                    <h4>Madhu Sudhan</h4>
+                    <p class="location">Chikkaballapur</p>
+                </div>
+                
+                <div class="testimonial">
+                    <img src="img/farmers/farmer2.png" alt="Farmer">
+                    <p>"Modern solutions to prevent animals from entering farmland can be effective, but they often come with high maintenance costs. Farmers struggle to afford and sustain these technologies, making traditional methods still widely used despite their limitations. Finding a cost-effective yet reliable solution remains a major challenge in protecting crops and farmland."</p>
+                    <h4>Nithin</h4>
+                    <p class="location">Ananth Pura</p>
+                </div>
+                
+                <div class="testimonial">
+                    <img src="img/farmers/farmer3.png" alt="Farmer">
+                    <p>"It is extremely difficult and distressing for farmers to stay awake all night guarding their fields, leaving their families at home with fear and uncertainty. The constant threat of animal attacks not only affects their livelihood but also puts their safety at risk."</p>
+                    <h4>Papineni Rajashekar</h4>
+                    <p class="location">Kadapa</p>
+                </div>
+                
+                <div class="testimonial">
+                    <img src="img/farmers/farmer4.png" alt="Farmer">
+                    <p>"Every time we grow crops, it has become common for animals to attack and damage the fields, leading to significant losses. Despite various efforts to protect the farmland, these attacks continue to threaten our hard work and investment. Without effective and affordable solutions, safeguarding crops remains a constant struggle."</p>
+                    <h4>Sandeep</h4>
+                    <p class="location">Chikkaballapur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footerdiv">
+        <iframe src="Footer/footer2.html" footer></iframe>
+    </div>
+
+    <script>
+        let lastScroll = 0;
+        const topDiv = document.getElementById('topdiv');
+        const navDiv = document.getElementById('navdiv');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > lastScroll && currentScroll > 40) {
+                topDiv.classList.add('hide-topbar');
+                navDiv.style.top = '0';
+            } else {
+                topDiv.classList.remove('hide-topbar');
+                navDiv.style.top = '40px';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+    <script src="./Navbar/top/top2.js"></script>
+    <script>
+        function updateCount(elementId, change) {
+            const countElement = document.getElementById(elementId);
+            let currentCount = parseInt(countElement.textContent);
+            currentCount = Math.max(0, currentCount + change); // Prevent negative numbers
+            countElement.textContent = currentCount;
+        }
+
+        function updateAttackCount(change) {
+            updateCount('attackCount', change);
+        }
+    </script>
+</body>
+</html>

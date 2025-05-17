@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Meet the Team</title>
+    <!-- Include Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        ::-webkit-scrollbar { display: none; }
+        * { scrollbar-width: none; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientBG {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        section {
+            padding: 30px 30px;
+            text-align: center;
+            border-radius: 20px;
+            width: 100%;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .team-title {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            color: #0d47a1;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .team-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #64b5f6, transparent);
+        }
+
+        .team-subtitle {
+            font-size: 1em;
+            color: #546e7a;
+            margin-bottom: 20px;
+        }
+
+        .team-members-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 0px 0;
+        }
+
+        .team-members {
+            display: flex;
+            gap: 25px;
+            animation: scrollTeam 25s linear infinite;
+            width: fit-content;
+            padding: 15px;
+        }
+
+        @keyframes scrollTeam {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .team-members:hover {
+            animation-play-state: paused;
+        }
+
+        .team-member {
+            min-width: 220px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 15px;
+            border: 1px solid rgba(100, 181, 246, 0.3);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            border-color: #64b5f6;
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #64b5f6;
+            transition: transform 0.4s ease;
+        }
+
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+
+        .team-member h3 {
+            font-size: 1.2em;
+            margin: 10px 0 5px;
+            color: #1e88e5;
+            font-weight: 600;
+        }
+
+        .team-member p {
+            font-size: 0.9em;
+            color: #546e7a;
+            margin: 0;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #546e7a;
+            font-size: 1.1em;
+            padding: 8px;
+            border-radius: 50%;
+            background: #f5f5f5;
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border: 1px solid rgba(100, 181, 246, 0.2);
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #1e88e5;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(30, 136, 229, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h2 class="team-title">Meet the Team</h2>
+        <p class="team-subtitle">TOGETHER, WE CULTIVATE SUCCESS</p>
+        <div class="team-members-container">
+            <div class="team-members">
+
+                <div class="team-member">
+                    <img src="img/Member1.png" alt="Team Member 1" class="team1">
+                    <h3>CEO</h3>
+                    <p>NAVANEETH H R</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Nava-11" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/h-r-navaneeth-b2938225b?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAD_y79EBc3OqgsyhO_n_R6tbZsY3_kGJT3M&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3BTHOUgA8SSgGeyodQTG39hg%3D%3D" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="img/Member2.png" alt="Team Member 2" class="team2">
+                    <h3>COO</h3>
+                    <p>YASHASWINI S</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/yasH04-s" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/yashaswini-s-56514225b?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAD_qEJ0BsKusu8mTNpAr0rDkxmXt-G11daE&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BTHRGKvg0Qd2m1neeWu%2BzXA%3D%3D" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="img/Member3.jpg" alt="Team Member 3" class="team3">
+                    <h3>CTO</h3>
+                    <p>RAVI KIRAN K</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/ravikirank2018" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ravikiran-k-54940125b?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAD_0KckBzIAaJkCxp59A26dRIAy2W8xs-yk&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BTHRGKvg0Qd2m1neeWu%2BzXA%3D%3D" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="img/Member4.jpg" alt="Team Member 4" class="team4">
+                    <h3>COO</h3>
+                    <p>EDIMUDI GOWTHAM</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/gowtham2627" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/e-gowtham-08a38225b?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAD_y6eoBHjH5OFf90M9xmDAfYxYGN3UE_D0&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BYv6%2BtLTYQ%2FiL7ls2TxPEmA%3D%3D" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img src="img/Member5.jpg" alt="Team Member 5" class="team5">
+                    <h3>CTO</h3>
+                    <p>SHASHANK N</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/ShashankNCoder" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/shashankn8105?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAEXJKnkBoKkQpxZ3rDnDD15qe6G8YgSVReE&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BTHRGKvg0Qd2m1neeWu%2BzXA%3D%3D" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>

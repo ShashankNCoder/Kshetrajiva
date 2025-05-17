@@ -1,0 +1,290 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Page Header */
+#search-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #2196F3;
+}
+
+#page-header {
+    background-image: url("https://images.unsplash.com/photo-1558637845-c8b7ead71a3e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8MTYlM0E5fGVufDB8fDB8fHww");
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-position-y: -720px;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#page-header h2,
+#page-header p {
+    color: #fff;
+    text-align: center;
+}
+
+#page-header h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#page-header p {
+    font-size: 1.2rem;
+}
+
+/* Blog/Products Section */
+#blog {
+    padding: 40px 50px 0 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-box {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.blog-box:hover {
+    transform: translateY(-5px);
+}
+
+.blog-img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-details {
+    width: 100%;
+    padding: 20px;
+}
+
+.blog-details h4 {
+    font-size: 24px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.blog-details p {
+    font-size: 14px;
+    color: #465b52;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #088178;
+}
+
+.stock-status {
+    font-size: 14px;
+    color: #28a745;
+}
+
+.rating {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.buy-button {
+    flex: 1;
+    background-color: #2196F3;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #066661;
+}
+
+.wishlist-button {
+    background: transparent;
+    border: 1px solid #088178;
+    color: #088178;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.wishlist-button:hover {
+    background: #088178;
+    color: #fff;
+}
+
+/* Footer iframe */
+#footerdiv {
+    width: 100%;
+    height: 620px;
+    margin-top: 50px;
+}
+
+#footerdiv iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 799px) {
+    #blog {
+        padding: 100px 20px 0 20px;
+    }
+
+    .blog-box {
+        align-items: flex-start;
+    }
+
+    .blog-img {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 477px) {
+    #page-header {
+        height: 30vh;
+    }
+
+    #blog {
+        padding: 50px 10px 0 10px;
+    }
+}
+
+#navdiv iframe[nav] {
+    width: 100%;
+    height: 60px;  /* Reduced from 80px */
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+    display: block;
+}
+
+#footerdiv iframe[footer] {
+    width: 100%;
+    height: 620px;
+    border: none;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+}
+
+/* Add margin to the body to prevent content from hiding behind fixed navbar */
+body {
+    margin-top: 90px;  /* Adjusted: 30px for top bar + 60px for navbar */
+    overflow-x: hidden;
+}
+
+/* Top bar and Navigation styles */
+#topdiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#topbar {
+    width: 100%;
+    height: 40px;  /* Reduced from 45px */
+    top: 0;
+    border: none;
+    overflow: hidden;
+    display: block;
+}
+
+#navdiv {
+    position: fixed;
+    top: 30px;  /* Adjusted to match new topbar height */
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#navbar {
+    width: 100%;
+    height: 75px;  /* Reduced from 80px */
+    border: none;
+    display: block;
+}
+
+/* Add this at the end of the file */
+.hide-navbar {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}

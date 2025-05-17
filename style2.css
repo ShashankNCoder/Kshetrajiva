@@ -1,0 +1,213 @@
+/* Dashboard Stats */
+.dashboard-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.stat-box i {
+    font-size: 2em;
+    color: #2196F3;
+    margin-bottom: 10px;
+}
+
+/* User Activity Feed */
+.user-activity {
+    padding: 40px;
+    background: #f5f5f5;
+}
+
+.activity-feed {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.activity-item {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.activity-item i {
+    color: #2196F3;
+}
+
+.activity-item .time {
+    color: #666;
+    font-size: 0.9em;
+    margin-left: auto;
+}
+
+.user-status {
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.device-status {
+    padding: 40px;
+    background: #f8f9fa;
+}
+
+.device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.device-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.device-card i {
+    font-size: 2em;
+    color: #2196F3;
+}
+
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.status.online {
+    background: #d4edda;
+    color: #155724;
+}
+
+.maintenance-section {
+    padding: 40px;
+    background: #fff;
+    position: relative;
+}
+
+.maintenance-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #2196F3, transparent);
+}
+
+.maintenance-timeline {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.maintenance-item {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.stat-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.stat-link:hover {
+    text-decoration: underline;
+}
+
+button.view-feed, button.check-status {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.activity-item.alert {
+    border-left: 4px solid #dc3545;
+}
+
+.activity-item.warning {
+    border-left: 4px solid #ffc107;
+}
+
+.highlight-icon {
+    font-size: 24px;
+    color: #2196F3;
+    margin-bottom: 10px;
+    padding: 15px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.maintenance-item:hover .highlight-icon {
+    transform: scale(1.1);
+    background: rgba(76, 175, 80, 0.2);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+}
+
+.counter-controls {
+    margin-top: 10px;
+}
+
+.counter-btn {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.counter-btn:hover {
+    background: #1976D2;
+    transform: scale(1.05);
+}
+
+.counter-btn.small {
+    padding: 4px 10px;
+    font-size: 14px;
+    margin: 0 3px;
+}
+
+.stat-box .counter-controls {
+    margin: 8px 0;
+}

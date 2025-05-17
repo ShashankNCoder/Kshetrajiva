@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>footer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="newletter" class="section-p1 section-m1">
+        <div class="newtext">
+            <h4>Always Sign In To Follow Up</h4>
+            <p>Get E-mail updates about our latest products and <span>new services.</span></p>
+        </div>
+        <div class="form">
+            <!-- Input field for email -->
+            <input id="emailInput" type="text" placeholder="Your email address">
+            <!-- Button to trigger the email validation and redirection -->
+            <button class="normal" type="button" onclick="validateAndRedirect(event)">Sign In</button>
+        </div>
+    </section>
+    
+    <script>
+        function validateAndRedirect(event) {
+            // Prevent default form submission behavior (if used in a form)
+            event.preventDefault();
+    
+            const emailInput = document.getElementById("emailInput").value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email format validation
+    
+            // Check if the email input is empty
+            if (emailInput === "") {
+                alert("Please enter your email address.");
+                return; // Stop further execution
+            }
+    
+            // Check if the email format is valid
+            if (!emailPattern.test(emailInput)) {
+                alert("Please enter a valid email address.");
+                return; // Stop further execution
+            }
+    
+            // Fixed redirect URL syntax
+            window.top.location.href = "../index2.html";
+        }
+    </script>
+    
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="./img/Kshetrajiva_logo.jpg" alt="logo" width="100" height="100">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> GITAM, Bengaluru, Karnataka-560001, India</p>
+            <p><strong>Phone:</strong> +91 8217800894 / 8105857049</p>
+            <p><strong>Email:</strong> kshetr.jiva24@gmail.com</p>
+            <p><strong>Website:</strong><a href="https://ksetrajiva.github.io/Gitam/" target="_blank"> Kshetrajiva</a></p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="http://www.linkedin.com/in/kshetra-jiva-b99a17333" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="tel:+918217800894" target="_blank"><i class="fa fa-phone-square"></i></a>
+                    <a href="https://ksetrajiva.github.io/Gitam/" target="_blank"><i class="fa fa-laptop"></i></a>
+                    <a href="mailto:kshetr.jiva24@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col">
+            <h4>About</h4>
+            <a href="..\LoginTop\aboutus\about2.html" target="_parent">About us</a>
+            <a href="..\LoginTop\delivery-info\delivery-info.html" target="_parent">Delivery Information</a>
+            <a href="..\LoginTop\terms\terms2.html" target="_parent">Terms & Conditions</a>
+            <a href="..\LoginTop\contactus\contact2.html" target="_parent">Contact us</a>
+        </div>
+    
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="..\LoginTop\login\login.html" target="_parent">Sign In</a>
+            <a href="..\cart\cart.html" target="_parent">View cart</a>
+            <a href="..\LoginTop\contactus\contact2.html" target="_parent">Help</a>
+        </div>
+    
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+    
+        <div class="copyright">
+            <p>© 2023 kshetrajiva - Solving Human-Wildlife Conflicts</p>
+        </div>
+    </footer>
+    
+    <script src="script.js">
+    </script>
+</body>
+</html>

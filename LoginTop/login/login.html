@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure login and registration page">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <title>Login Page</title>
+</head>
+    
+
+<body>
+    <div id="topdiv">
+        <top-bar id="topbar"></top-bar>
+    </div>
+    <div id="navdiv">
+        <iframe src="../../Navbar/nav.html" id="navbar"></iframe>
+    </div>
+    </div>
+    <div style="margin-top: 30px;"></div>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="register-form" action="../../index2.html" novalidate>
+                <div class="step-indicator">
+                    <div class="step active" data-step="1">Step 1: Account</div>
+                    <div class="step" data-step="2">Step 2: Land Details</div>
+                </div>
+                <div class="step-content step-1 active">
+                    <h1>Create Account</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon" aria-label="Sign up with Google"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon" aria-label="Sign up with Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon" aria-label="Sign up with Github"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="icon" aria-label="Sign up with LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <input type="text" placeholder="Name" required id="name" name="name" aria-label="Name">
+                    <input type="email" placeholder="Email" required id="email" name="email" aria-label="Email">
+                    <input type="password" placeholder="Password" required minlength="6" id="password" name="password" aria-label="Password">
+                    <input type="tel" placeholder="Phone (optional)" id="phone" name="phone" pattern="[0-9]{10}" aria-label="Phone">
+                    <button type="button" class="next-step" data-next="2">
+                        <span class="button-text">Next Step</span>
+                        <span class="loading-spinner hidden"></span>
+                    </button>
+                </div>
+                <div class="step-content step-2">
+                    <h1>Land Details</h1>
+                    <input type="text" placeholder="Survey Number" required id="survey-number" name="survey_number" aria-label="Survey Number">
+                    <input type="text" placeholder="Land Location" required id="land-location" name="land_location" aria-label="Land Location">
+                    <textarea placeholder="Detailed Address" required id="detailed-address" name="detailed_address" aria-label="Detailed Address" rows="3"></textarea>
+                    <div id="register-otp-section" class="otp-section hidden">
+                        <input type="text" placeholder="Enter OTP" required maxlength="6" name="register-otp" id="register-otp-input" aria-label="OTP">
+                        <div class="otp-timer">Time remaining: <span id="register-timer">02:00</span></div>
+                        <button type="button" id="register-resend-otp" class="resend-button">Resend OTP</button>
+                    </div>
+                    <div class="step-buttons">
+                        <button type="button" class="prev-step" data-prev="1">
+                            <span class="button-text">Previous</span>
+                        </button>
+                        <button type="submit">
+                            <span class="button-text">Sign Up</span>
+                            <span class="loading-spinner hidden"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form id="login-form" action="../../index2.html" novalidate>
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon" aria-label="Sign in with Google"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon" aria-label="Sign in with Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon" aria-label="Sign in with Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon" aria-label="Sign in with LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email and password</span>
+                <input type="email" placeholder="Email" required name="email" aria-label="Email">
+                <input type="password" placeholder="Password" required minlength="6" name="password" aria-label="Password">
+                <a href="#" class="forgot-password">Forgot Your Password?</a>
+                <div id="otp-section" class="otp-section hidden">
+                    <input type="text" placeholder="Enter OTP" required maxlength="6" name="otp" id="otp-input" aria-label="OTP">
+                    <div class="otp-timer">Time remaining: <span id="timer">02:00</span></div>
+                    <button type="button" id="resend-otp" class="resend-button">Resend OTP</button>
+                </div>
+                <button type="submit">
+                    <span class="button-text">Sign In</span>
+                    <span class="loading-spinner hidden"></span>
+                </button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footerdiv">
+        <iframe src="../../Footer/footer.html" id="footer" scrolling="no" frameborder="0" title="Footer"></iframe>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="../script.js"></script>
+    <script src="../../Navbar/top/top.js"></script>
+
+</html>
